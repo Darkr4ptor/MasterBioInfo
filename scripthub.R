@@ -2,6 +2,7 @@ library(dplyr)
 library(tidyr)
 library(tibble)
 
+#Cambiad a vuestro propio working directory
 setwd("/home/santiago/Escritorio/TercerDia/");
 
 files = dir()
@@ -33,6 +34,7 @@ for(i in 2:60)
 
 VF$Sample = gsub(".vf", "", VF$Sample)
 
+#verificad aqui vuestros nombres de columna
 colnames(ABR) = c("qaccver", "saccver", "pident", "length", "missmatch", "gapopen", "qstart", "qend", "sstart", "send",
                   "evalue", "bitscore", "Sample")
 colnames(VF) = c("qaccver", "saccver", "pident", "length", "missmatch", "gapopen", "qstart", "qend", "sstart", "send",
