@@ -1,0 +1,39 @@
+
+#Pedir al usuario una cadena de adn y contar cuántas veces aparece cada una de las
+#bases. Hacer que esto se repita en un bucle infinito que vaya pidiendo distintas cadenas.
+#El programa finalizará si se teclea la palabra fin.
+
+import time;
+
+
+#Global base counters
+AdenineCounter  = 0;
+GuanineCounter  = 0;
+CitosineCounter = 0;
+ThymineCounter  = 0;
+
+print("--------- DNA counter STARTED-----------");
+
+while True:
+    usuarioInput = input("Introduzca su cadena de DNA. \n Escriba FIN para terminar:");
+    usuarioInput.upper();
+
+    if usuarioInput == "FIN":
+        print("Terminando ejecución del programa...")
+        time.sleep(5);
+        break;
+    else:
+        AdenineCounter = usuarioInput.count("A");
+        CitosineCounter = usuarioInput.count("C");
+        ThymineCounter = usuarioInput.count("T");
+        GuanineCounter = usuarioInput.count("G");
+
+        #print values to screen and reset
+        print("Adenine count is: " + str(AdenineCounter));
+        print("Cytosine count is: " + str(CitosineCounter));
+        print("Guanine count is: " + str(GuanineCounter));
+        print("Thymine count is: " + str(ThymineCounter));
+        continue;
+
+
+
