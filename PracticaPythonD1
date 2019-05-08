@@ -1,0 +1,25 @@
+# ------ EJERCICIO 1 ------ #  
+
+#Definicion de listas, ABCDEF vale igual
+AminoAcidos = ["A","B","C","D","E","F"];
+
+#Adicion de nuevo elemento
+AminoAcidos.append("G");
+
+#Cargando input de usuario para borrar elemento
+deletedAmino = input("¿Que aminoacido borro? : ");
+
+AminoAcidos.remove(deletedAmino);
+
+#Listo
+AminoAcidos.sort();
+print(AminoAcidos);
+
+
+# ------- EJERCICIO 2 --------- #
+
+presortedList = AminoAcidos;
+sortedList = presortedList;
+sortedList.sort();
+print("Presorted", presortedList);
+print("Sorted", sortedList);
