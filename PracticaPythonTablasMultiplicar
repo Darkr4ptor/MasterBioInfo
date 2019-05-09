@@ -1,0 +1,38 @@
+
+# ---- Mostrar tablas de multiplicar del 1 al 9 ###
+
+# Table structure #
+#
+#  tableIndex X tableOperator = result
+#   where tableIndex [1, 9]
+#   where tableOperator [1, 10]
+#   0 is trivial, so not included
+
+import time;
+
+tableIndex    = 1; #Defines table name, the first operator
+tableOperator = 1;
+
+#Alternative: use for tableIndex in range(1,10,1):
+while tableIndex < 10:
+
+    #get the current result
+    result = tableIndex * tableOperator;
+     
+    #string concatenation using print does not require explicit conv.
+    print(tableIndex, " X ", tableOperator, " is: ", result); # "1 X 9 is : 9
+
+    #advance both operators
+
+    if tableOperator <= 9:
+        tableOperator += 1;
+    
+    #Reset the Operator back to 1 and increase tableIndex by one, so that the next table is printed
+    else:
+        tableIndex += 1;
+        tableOperator = 1;
+
+
+#This is executed once the main loop is over
+print("--------- Tables done --------")
+time.sleep(3); #sleep here so that user can read the printed message before program end.
